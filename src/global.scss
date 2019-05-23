@@ -1,0 +1,60 @@
+@import "~bootstrap/scss/bootstrap";
+// body {
+//   background-color:#000;
+//   color:#FFF;
+// }
+
+// h1,h2,h3,h4,h5,h6 {
+//   color:#FFF;
+// }
+$teslafi-red: #ff0000;
+body {
+  background-color:#000;
+  color:#FFF;
+
+  .main {
+    color:#FFF;
+    h1,h2,h3,h4,h5,h6 {
+      color:#FFF;
+    }
+  }
+  input[type=text], input[type=password], input[value=Login], label {
+    font-family: var(--font-family-sans-serif);
+    font-size:initial;
+  }
+  
+}
+
+// input[type=text], input[type=password] {
+//   width:initial;
+//   padding:initial;
+//   font-size:initial;
+//   margin-top:initial;
+// }
+body.login {
+  h1 {
+    display:none;
+  }
+  form {
+    max-width:320px;
+    margin:0 auto;
+  }
+  h3 {
+    background-color:$teslafi-red;
+    padding:30px;
+  }
+  .btn-danger {
+    background-color:$teslafi-red;
+  }
+  input[type=submit] {
+    &:hover {
+      background-color:darken($teslafi-red,10);
+    }
+  }
+}
+
+body.signup {
+  #wrapper {
+    display:none;
+  }
+}
