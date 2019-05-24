@@ -74,16 +74,18 @@
 
         p {
           padding:5px;
+          font-size:12px;
+          white-space:nowrap;
           > .tooltip {
             position: relative;
             max-height: 40px;
             opacity:1;
             display: inline-block;
-            width: 32px;
-            height: 32px;
+            width: $vehicle-info-bar-icons-size!important;
+            height: $vehicle-info-bar-icons-size!important;
             margin-top:8px;
-            margin-left:4px;
-            margin-right:4px;
+            // margin-left:4px;
+            // margin-right:4px;
             a {
               display: block;
               height: 100%;
@@ -91,6 +93,8 @@
               img,input {
                 vertical-align: middle;
                 border-style: none;
+                height:$vehicle-info-bar-icons-size!important;
+                width:$vehicle-info-bar-icons-size!important;
               }
             }
             &:nth-child(2) {

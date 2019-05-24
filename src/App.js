@@ -6,6 +6,7 @@ import Header from "./Layout/Header";
 import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
+import Software from "./Pages/Software";
 import "./global";
 
 $("body").append('<div id="app"></div>');
@@ -26,6 +27,10 @@ const routes = [
   {
     path: "/",
     component: Dashboard
+  },
+  {
+    path: "/software.php",
+    component: Software
   }
 ]
 

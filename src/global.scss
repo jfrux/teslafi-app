@@ -13,7 +13,7 @@ $top-bar-height: $menu-bar-height + $vehicle-bar-height;
 $teslafi-red: #dc3545;
 $content-bg-color: #212121;
 $right-bar-width: 20%;
-
+$vehicle-info-bar-icons-size: 25px;
 ::-webkit-scrollbar {
   width: 8px; /* 1px wider than Lion. */
   /* This is more usable for users trying to click it. */
@@ -124,6 +124,7 @@ body {
   
 }
 @import "./styles/layout/header";
+@import "./styles/software";
 @import "./styles/login";
 @import "./styles/dashboard";
 @import "./styles/signup";
