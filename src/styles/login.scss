@@ -1,0 +1,21 @@
+body.login {
+  h1 {
+    display:none;
+  }
+  form {
+    max-width:320px;
+    margin:0 auto;
+  }
+  h3 {
+    background-color:$teslafi-red;
+    padding:30px;
+  }
+  .btn-danger {
+    background-color:$teslafi-red;
+  }
+  input[type=submit] {
+    &:hover {
+      background-color:darken($teslafi-red,10);
+    }
+  }
+}

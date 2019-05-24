@@ -1,0 +1,119 @@
+
+.menu-bar {
+  .navbar-brand {
+    img {
+      width: 62px;
+      position: absolute;
+      top: 3px;
+      left: 6px;
+    }
+  }
+  .dropdown-menu {
+    padding: 0.5rem 0;
+    margin: 0 0 0;
+    font-size: 1rem;
+    color: #FFF;
+    background-color: #121212;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+  }
+  .dropdown-item {
+    color:rgba(#FFF,0.9);
+    &:hover {
+      color:#FFF;
+      background-color:rgba(#FFF,0.2);
+    }
+  }
+  .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.555em;
+    vertical-align: 0.155em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
+  .navbar.bg-dark {
+    background-color:$teslafi-red!important;
+    padding:0;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    color:rgba(#FFF,0.8);
+    font-size:14px;
+  }
+  .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+    background-color:rgba(#000,0.2);
+    color:#FFF;
+  }
+}
+
+.vehicle-info-bar {
+  position:fixed;
+  top: $menu-bar-height;
+  width:100%;
+  height:$vehicle-bar-height;
+  left:0;
+  border-bottom:1px solid rgba(#FFF,0.1);
+  > .card-group {
+    > .card:first-child {
+      display:none;
+    }
+    > .card {
+      height:$vehicle-bar-height;
+      background-color:#121212;
+      color:#FFF;
+      border:0;
+      border-radius:0;
+      
+      .card-body {
+        padding:0;
+        height:$vehicle-bar-height;
+        text-align:center;
+
+        p {
+          padding:5px;
+          > .tooltip {
+            position: relative;
+            max-height: 40px;
+            opacity:1;
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            margin-top:8px;
+            margin-left:4px;
+            margin-right:4px;
+            a {
+              display: block;
+              height: 100%;
+              width: 100%;
+              img,input {
+                vertical-align: middle;
+                border-style: none;
+              }
+            }
+            &:nth-child(2) {
+              img {
+                filter: invert(1);
+              }
+            }
+            &:nth-child(6) {
+              img {
+                filter: hue-rotate(210deg) invert(1) brightness(200%);
+              }
+            }
+            &:last-child {
+              input {
+                filter: invert(1) brightness(140%);
+              }
+            }
+            .tooltiptext {
+              display:none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

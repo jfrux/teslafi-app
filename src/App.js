@@ -3,28 +3,46 @@ import ReactDOM from "react-dom";
 import $ from 'jquery';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Header from "./Layout/Header";
-import DriveSummary from "./Pages/DriveSummary";
+import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import "./global";
 
 $("body").append('<div id="app"></div>');
-
-const routes = {
-  "/userlogin.php": "Login",
-  "/index.php": "DriveSummary"
-}
+const currentPath = window.location.pathname;
+const routes = [
+  {
+    path: "/signup.php",
+    component: Signup
+  },
+  {
+    path: "/userlogin.php",
+    component: Login
+  },
+  {
+    path: "/index.php",
+    component: Dashboard
+  },
+  {
+    path: "/",
+    component: Dashboard
+  }
+]
 
 class App extends Component {
   // console.log("currentRoutePath:",currentRoutePath);
   // const page = pages[routes[currentRoutePath]];
   render() {
+    const routeComps = routes.map((route,index) => {
+      return (
+        <Route key={`route-${index}`} path={route.path} component={route.component} />
+      )
+    });
     return (
       <Router>
         <div>
-          <Route exact path="/index.php" component={DriveSummary} />
-          <Route path="/userlogin.php" component={Login} />
-          <Route path="/signup.php" component={Signup} />
+          {currentPath !== "/userlogin.php" && <Header />}
+          {routeComps}
         </div>
       </Router>
     );

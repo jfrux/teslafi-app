@@ -9,7 +9,8 @@ var options = {
     version: APP_VERSION,
     out: './build',
     inject: [
-      './dist/app.bundle.js'
+      './dist/app.bundle.js',
+      './src/preboot.css'
     ]
     // overwrite: true,
     // asar: false, // see conceal

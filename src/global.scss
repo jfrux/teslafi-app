@@ -7,9 +7,108 @@
 // h1,h2,h3,h4,h5,h6 {
 //   color:#FFF;
 // }
-$teslafi-red: #ff0000;
+$menu-bar-height: 37px;
+$vehicle-bar-height: 58px;
+$top-bar-height: $menu-bar-height + $vehicle-bar-height;
+$teslafi-red: #dc3545;
+$content-bg-color: #212121;
+$right-bar-width: 20%;
+
+::-webkit-scrollbar {
+  width: 8px; /* 1px wider than Lion. */
+  /* This is more usable for users trying to click it. */
+  background-color: rgba(0,0,0,0);
+  -webkit-border-radius: 100px;
+}
+
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+  /* This is the EXACT color of Mac OS scrollbars. 
+     Yes, I pulled out digital color meter */
+  background: rgba(0,0,0,0.5);
+  -webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+  -webkit-border-radius: 100px;
+}
+
+#wrapper {
+  display: none;
+  position: fixed;
+  top: $top-bar-height;
+  width:100%;
+  height: calc(100% - #{$top-bar-height});
+  max-width:100%;
+  min-width:100%;
+
+  #header,#footer {
+    display:none;
+  }
+
+  #content,#rightcolumn {
+    background-color:$content-bg-color;
+    margin:0;
+    > table {
+      tr td {
+        font-size:12px;
+      }
+    }
+  }
+
+  #rightcolumn {
+    position: fixed;
+    top: $top-bar-height;
+    right:0;
+    background-color:#000;
+    height: calc(100% - #{$top-bar-height});
+    overflow: auto;
+    width:$right-bar-width;
+    .fusioncharts-container svg {
+      max-width: 100%;
+      filter: hue-rotate(200deg) invert(1);
+    }
+    > br {
+      display:none;
+    }
+
+    
+  }
+  #app > div > div:nth-child(1) > div.menu-bar > nav > div > ul > li.dropdown.show.nav-item > div > button:nth-child(1) {
+    display:none;
+  }
+  #content > div:first-child {
+    display:none;
+  }
+  #contentliquid,#contentliquidNoSidebar {
+    padding-top:0;
+    position:fixed;
+    top:$top-bar-height;
+    left:0;
+    height: calc(100% - #{$top-bar-height});
+    width: calc(100% - #{$right-bar-width});
+    overflow:auto;
+  }
+
+  #contentliquidNoSidebar {
+    width: 100%;
+    float: initial;
+  }
+
+  #contentNoSidebar {
+    padding-top:0;
+    margin:0;
+    background-color:$content-bg-color;
+  }
+}
 body {
-  background-color:#000;
+  background-color:$content-bg-color;
   color:#FFF;
 
   .main {
@@ -24,37 +123,7 @@ body {
   }
   
 }
-
-// input[type=text], input[type=password] {
-//   width:initial;
-//   padding:initial;
-//   font-size:initial;
-//   margin-top:initial;
-// }
-body.login {
-  h1 {
-    display:none;
-  }
-  form {
-    max-width:320px;
-    margin:0 auto;
-  }
-  h3 {
-    background-color:$teslafi-red;
-    padding:30px;
-  }
-  .btn-danger {
-    background-color:$teslafi-red;
-  }
-  input[type=submit] {
-    &:hover {
-      background-color:darken($teslafi-red,10);
-    }
-  }
-}
-
-body.signup {
-  #wrapper {
-    display:none;
-  }
-}
+@import "./styles/layout/header";
+@import "./styles/login";
+@import "./styles/dashboard";
+@import "./styles/signup";

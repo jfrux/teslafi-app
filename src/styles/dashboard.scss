@@ -1,0 +1,30 @@
+body.dashboard {
+  #content {
+    > center:nth-child(4) {
+      position: sticky;
+      top: 0px;
+      background-color: #2b3035;
+    }
+    table {
+      margin-bottom:0;
+
+      tr {
+        td {
+          width: 9%;
+        }
+      }
+    }
+  }
+  #myFormID > button {
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+  }
+
+  #myFormID > button:nth-child(24) {
+    left:5px;
+  }
+  #myFormID > button:nth-child(25) {
+    right:5px;
+  }
+}

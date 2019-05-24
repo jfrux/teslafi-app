@@ -21,7 +21,7 @@ class Login extends Component {
     $("form").contents()
     .filter(function() {
       return this.nodeType == 3; //Node.TEXT_NODE
-    }).remove();;
+    }).remove();
     // $("body > :not(#app)").remove();
     // $originalContent.find("form").attr('action','/userlogin.php');
     return {__html: $originalContent.html()};
