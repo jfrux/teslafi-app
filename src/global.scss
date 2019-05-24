@@ -8,11 +8,11 @@
 //   color:#FFF;
 // }
 $menu-bar-height: 37px;
-$vehicle-bar-height: 58px;
+$vehicle-bar-height: 46px;
 $top-bar-height: $menu-bar-height + $vehicle-bar-height;
 $teslafi-red: #dc3545;
 $content-bg-color: #212121;
-$right-bar-width: 20%;
+$right-bar-width: 300px;
 $vehicle-info-bar-icons-size: 25px;
 ::-webkit-scrollbar {
   width: 8px; /* 1px wider than Lion. */
@@ -124,6 +124,7 @@ body {
   
 }
 @import "./styles/layout/header";
+@import "./styles/preferences";
 @import "./styles/software";
 @import "./styles/login";
 @import "./styles/dashboard";

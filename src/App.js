@@ -6,6 +6,7 @@ import Header from "./Layout/Header";
 import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
+import Preferences from "./Pages/Preferences";
 import Software from "./Pages/Software";
 import "./global";
 
@@ -13,22 +14,32 @@ $("body").append('<div id="app"></div>');
 const currentPath = window.location.pathname;
 const routes = [
   {
+    exact: false,
     path: "/signup.php",
     component: Signup
   },
   {
+    exact: false,
+    path: "/preferences.php",
+    component: Preferences
+  },
+  {
+    exact: false,
     path: "/userlogin.php",
     component: Login
   },
   {
+    exact: false,
     path: "/index.php",
     component: Dashboard
   },
   {
+    exact: true,
     path: "/",
     component: Dashboard
   },
   {
+    exact: false,
     path: "/software.php",
     component: Software
   }
@@ -40,7 +51,7 @@ class App extends Component {
   render() {
     const routeComps = routes.map((route,index) => {
       return (
-        <Route key={`route-${index}`} path={route.path} component={route.component} />
+        <Route key={`route-${index}`} exact={route.exact} path={route.path} component={route.component} />
       )
     });
     return (
