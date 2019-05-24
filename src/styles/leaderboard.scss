@@ -1,0 +1,33 @@
+body.leaderboard {
+  #contentNoSidebar {
+    h2 {
+      position: sticky;
+      top: 0;
+      background-color: #272c31;
+      margin-bottom: 0;
+      font-size: 18px;
+      padding: 10px 6px;
+      font-weight:bold;
+      a {
+        color: #FFF;
+      }
+    }
+    h4 {
+      font-size:16px;
+    }
+  }
+  
+  .filter-list {
+    display:flex;
+    span,a {
+      display:inline-block;
+      padding:0 10px;
+      color:#FFF;
+    }
+    a {
+      border-radius:30px;
+      border: 1px solid #FFF;
+      margin: 0 5px;
+    }
+  }
+}

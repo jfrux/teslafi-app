@@ -14,30 +14,30 @@ $teslafi-red: #dc3545;
 $content-bg-color: #212121;
 $right-bar-width: 300px;
 $vehicle-info-bar-icons-size: 25px;
-::-webkit-scrollbar {
-  width: 8px; /* 1px wider than Lion. */
-  /* This is more usable for users trying to click it. */
-  background-color: rgba(0,0,0,0);
-  -webkit-border-radius: 100px;
-}
+// ::-webkit-scrollbar {
+//   width: 8px; /* 1px wider than Lion. */
+//   /* This is more usable for users trying to click it. */
+//   background-color: rgba(0,0,0,0);
+//   -webkit-border-radius: 100px;
+// }
 
-/* hover effect for both scrollbar area, and scrollbar 'thumb' */
-::-webkit-scrollbar:hover {
-  background-color: rgba(0, 0, 0, 0.09);
-}
+// /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+// ::-webkit-scrollbar:hover {
+//   background-color: rgba(0, 0, 0, 0.09);
+// }
 
-/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
-::-webkit-scrollbar-thumb:vertical {
-  /* This is the EXACT color of Mac OS scrollbars. 
-     Yes, I pulled out digital color meter */
-  background: rgba(0,0,0,0.5);
-  -webkit-border-radius: 100px;
-}
+// /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+// ::-webkit-scrollbar-thumb:vertical {
+//   /* This is the EXACT color of Mac OS scrollbars. 
+//      Yes, I pulled out digital color meter */
+//   background: rgba(0,0,0,0.5);
+//   -webkit-border-radius: 100px;
+// }
 
-::-webkit-scrollbar-thumb:vertical:active {
-  background: rgba(0,0,0,0.61); /* Some darker color when you click it */
-  -webkit-border-radius: 100px;
-}
+// ::-webkit-scrollbar-thumb:vertical:active {
+//   background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+//   -webkit-border-radius: 100px;
+// }
 
 #wrapper {
   display: none;
@@ -125,6 +125,7 @@ body {
 }
 @import "./styles/layout/header";
 @import "./styles/preferences";
+@import "./styles/leaderboard";
 @import "./styles/software";
 @import "./styles/login";
 @import "./styles/dashboard";

@@ -8,6 +8,7 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Preferences from "./Pages/Preferences";
 import Software from "./Pages/Software";
+import Leaderboard from "./Pages/Leaderboard";
 import "./global";
 
 $("body").append('<div id="app"></div>');
@@ -42,6 +43,16 @@ const routes = [
     exact: false,
     path: "/software.php",
     component: Software
+  },
+  {
+    exact: false,
+    path: "/softwareUpdates.php",
+    component: Software
+  },
+  {
+    exact: false,
+    path: "/top.php",
+    component: Leaderboard
   }
 ]
 
